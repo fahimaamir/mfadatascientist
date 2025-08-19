@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 from streamlit_vizzu import Config, Data, Style, VizzuChart
 
-data_frame = pd.read_csv("data/music.csv", dtype={"Year": str})
+#data_frame = pd.read_csv("data/music.csv", dtype={"Year": str})
 
 #https://drive.google.com/file/d/10PqayqNKC41MfBv0JTMr5d1aDzobP4Yp/view?usp=drive_link
 
