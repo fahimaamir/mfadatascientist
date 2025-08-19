@@ -4,6 +4,20 @@ from streamlit_vizzu import Config, Data, Style, VizzuChart
 
 data_frame = pd.read_csv("data/music.csv", dtype={"Year": str})
 
+#https://drive.google.com/file/d/10PqayqNKC41MfBv0JTMr5d1aDzobP4Yp/view?usp=drive_link
+
+
+url = 'https://drive.google.com/file/d/10PqayqNKC41MfBv0JTMr5d1aDzobP4Yp/view?usp=drive_link'
+path = 'https://drive.google.com/uc?export=download&confirm=1&id='+url.split('/')[-2]
+data_frame = pd.read_csv(path)
+#st.write(data_frame)
+
+
+
+
+
+
+
 data = Data()
 data.add_df(data_frame)
 

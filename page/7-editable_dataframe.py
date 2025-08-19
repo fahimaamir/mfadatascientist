@@ -5,9 +5,9 @@ from streamlit_vizzu import Config, Data, VizzuChart
 ###############################################################################
 # Header of page
 ###############################################################################
-st.set_page_config(layout="wide", page_title="Data Editor and Vizzu", page_icon="🧮")
+st.set_page_config(layout="wide", page_title="Data Editor with Graph", page_icon="🧮")
 c1, c2 = st.columns([1, 1])
-c1.header("Editable dataframes and Vizzu charts")
+c1.header("Editable data and  charts")
 warning_placeholder = st.empty()
 
 if "graph_type" not in st.session_state:
@@ -42,7 +42,7 @@ with c1:
         },
     )
     st.caption(
-        "If not familiar with how to work with editable dataframes, check the [documentation](http://docs.streamlit.io/library/advanced-features/dataframes#edit-data-with-stdata_editor)."
+        "If not familiar with how to work with editable data, check the [documentation] call to 03700799238 "
     )
 
 st.session_state.graph_type = graph_sel
@@ -116,8 +116,6 @@ st.session_state.current_df = clean_df
 
 # Some other links
 _, c1, c2, c3 = st.columns([1, 2, 2, 2])
-c1.caption(
-    "[streamlit-vizzu documentation](https://github.com/vizzu-streamlit/streamlit-vizzu/)"
-)
-c2.caption("[streamlit documentation](https://docs.streamlit.io/)")
-c3.caption("[(ipy)vizzu documentation](https://ipyvizzu.vizzuhq.com/latest/)")
+#c1.caption(    "[streamlit-vizzu documentation](https://github.com/vizzu-streamlit/streamlit-vizzu/)")
+#c2.caption("[streamlit documentation](https://docs.streamlit.io/)")
+#c3.caption("[(ipy)vizzu documentation](https://ipyvizzu.vizzuhq.com/latest/)")

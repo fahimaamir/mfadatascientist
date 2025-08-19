@@ -9,7 +9,15 @@ from streamlit_vizzu import Config, Data, Style, VizzuChart
 from ipyvizzustory import Slide, Step
 from ipyvizzustory.env.py.story import Story
 
-data_frame = pd.read_csv("data/music2.csv", dtype={"Year": str})
+#data_frame = pd.read_csv("data/music2.csv", dtype={"Year": str})
+
+
+
+url = 'https://drive.google.com/file/d/1kyFu7RfoJHskiL8qcOmHWENpBsg5S5Ee/view?usp=drive_link'
+path = 'https://drive.google.com/uc?export=download&confirm=1&id='+url.split('/')[-2]
+data_frame = pd.read_csv(path)
+
+
 
 data = Data()
 data.add_df(data_frame)

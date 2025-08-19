@@ -5,9 +5,9 @@ from streamlit_vizzu import Config, Data, VizzuChart
 ###############################################################################
 # Header of page
 ###############################################################################
-st.set_page_config(layout="wide", page_title="Data Editor and Vizzu", page_icon="🧮")
+st.set_page_config(layout="wide", page_title="Data Editor and Graph", page_icon="🧮")
 c1, c2 = st.columns([2, 1])
-c1.header("Editable dataframes and Vizzu charts")
+c1.header("Editable data and  charts")
 warning_placeholder = st.empty()
 
 ###############################################################################
@@ -18,11 +18,11 @@ with st.expander("Add new columns to the dataframe?"):
     st.write(
         """To add a new column to the dataframe, fill the fields below and click on the button.
     The new column will be added to the dataframe and the visualization options will be updated
-    if the new column is not on the current dataframe columns.
+    if the new column is not on the current data columns.
     """
     )
     c1, c2, c3, c4 = st.columns(4)
-    st.caption("Add a new column to the dataframe")
+    st.caption("Add a new column to the data")
     col_name = c1.text_input("Column name", "new_col")
     dtype_sel = c2.selectbox("Data type", ["float", "str"])
     if dtype_sel == "float":
@@ -33,7 +33,7 @@ with st.expander("Add new columns to the dataframe?"):
         default_value = None
     c4.markdown("")
     c4.markdown("")
-    add_sel = c4.button("Add column to dataframe")
+    add_sel = c4.button("Add column to data")
 
 ###############################################################################
 # Editable dataframe
@@ -69,9 +69,7 @@ edited_df = st.data_editor(
         "# pokemons": st.column_config.NumberColumn(default=1),
     },
 )
-st.caption(
-    "If not familiar with how to work with editable dataframes, check the [documentation](http://docs.streamlit.io/library/advanced-features/dataframes#edit-data-with-stdata_editor)."
-)
+#st.caption(    "If not familiar with how to work with editable dataframes, check the [documentation](http://docs.streamlit.io/library/advanced-features/dataframes#edit-data-with-stdata_editor).")
 
 ###############################################################################
 # Plot options
@@ -158,7 +156,7 @@ st.session_state.current_df = clean_df
 # Some other links
 _, c1, c2, c3 = st.columns([1, 2, 2, 2])
 c1.caption(
-    "[streamlit-vizzu documentation](https://github.com/vizzu-streamlit/streamlit-vizzu/)"
+    "Muhammad is the Best"
 )
-c2.caption("[streamlit documentation](https://docs.streamlit.io/)")
-c3.caption("[(ipy)vizzu documentation](https://ipyvizzu.vizzuhq.com/latest/)")
+#c2.caption("[streamlit documentation](https://docs.streamlit.io/)")
+#c3.caption("[(ipy)vizzu documentation](https://ipyvizzu.vizzuhq.com/latest/)")
